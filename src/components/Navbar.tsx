@@ -20,6 +20,7 @@ const HeaderContainer = styled(Box)(({ theme }) => ({
 const Header = styled('header')(({ theme }) => ({
   width: '100%',
   height: '90px',
+  boxShadow: '0px 4px 40px 0px rgba(51, 51, 51, 0.08)',
   [theme.breakpoints.down("md")]: {
     height: '75px',
   },
