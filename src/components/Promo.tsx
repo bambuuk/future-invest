@@ -11,6 +11,7 @@ const Section = styled('section')(({ theme }) => ({
   backgroundImage: `url(${bgImage})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
+  overflow: 'hidden',
   [theme.breakpoints.down("md")]: {
     height: 'calc(100vh - 75px)',
   },
@@ -73,11 +74,13 @@ const Promo = () => {
         <Box sx={{
           width: '100%',
           height: '100%',
-          position: 'relative'
+          position: 'relative',
         }}>
           <Box sx={{
             position: 'absolute',
-            top: '61px',
+            display: { xs: 'none', sm: 'block', },
+            top: '50%',
+            transform: 'translateY(-50%)',
             left: '-140px',
             width: '500px',
             height: '500px',
