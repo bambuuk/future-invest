@@ -1,8 +1,12 @@
+import Navbar from "./components/Navbar";
+import { ThemeProvider } from '@mui/material';
+import { theme } from "./theme";
+
 function App() {
   return (
-    <div className="App">
-      start
-    </div>
+    <ThemeProvider theme={theme}>
+      <Navbar />
+    </ThemeProvider>
   );
 }
 
