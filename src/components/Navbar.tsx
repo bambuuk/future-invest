@@ -17,10 +17,13 @@ const HeaderContainer = styled(Box)(({ theme }) => ({
   },
 }));
 
-const Header = styled('header')({
+const Header = styled('header')(({ theme }) => ({
   width: '100%',
   height: '90px',
-});
+  [theme.breakpoints.down("md")]: {
+    height: '75px',
+  },
+}));
 
 const Logo = styled('div')(({ theme }) => ({
   color: theme.palette.primary.main,

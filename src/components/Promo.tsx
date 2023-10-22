@@ -4,14 +4,17 @@ import { CustomContainer, CustomBtn } from './CustomElements';
 const bgImage = require("../assets/promo-bg-img.png");
 const designEl = require('../assets/design-el.png');
 
-const Section = styled('section')({
+const Section = styled('section')(({ theme }) => ({
   position: 'relative',
   height: 'calc(100vh - 90px)',
   width: '100%',
   backgroundImage: `url(${bgImage})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-});
+  [theme.breakpoints.down("md")]: {
+    height: 'calc(100vh - 75px)',
+  },
+}));
 
 const CustomHead = styled('h1')(({ theme }) => ({
   color: '#FFF',
