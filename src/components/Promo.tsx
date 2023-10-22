@@ -71,19 +71,38 @@ const Promo = () => {
     <Section>
       <CustomContainer>
         <Box sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
           width: '100%',
           height: '100%',
-          alignItems: { xs: 'center', sm: 'start' }
+          position: 'relative'
         }}>
-          <CustomHead>Meaningful investments in Main Street businesses</CustomHead>
-          <Description>
-            Browse vetted investment offerings in communities all over the US.
-          </Description>
-          <Box>
-            <CustomBtn>Get Started</CustomBtn>
+          <Box sx={{
+            position: 'absolute',
+            top: '61px',
+            left: '-140px',
+            width: '500px',
+            height: '500px',
+            background: '#336EE1',
+            opacity: '50%',
+            borderRadius: '50%',
+            zIndex: 10
+          }} />
+          <Box sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            width: '100%',
+            height: '100%',
+            alignItems: { xs: 'center', sm: 'start' },
+            position: 'relative',
+            zIndex: 100
+          }}>
+            <CustomHead>Meaningful investments in Main Street businesses</CustomHead>
+            <Description>
+              Browse vetted investment offerings in communities all over the US.
+            </Description>
+            <Box>
+              <CustomBtn>Get Started</CustomBtn>
+            </Box>
           </Box>
         </Box>
       </CustomContainer>
