@@ -101,7 +101,6 @@ const Navbar = () => {
           </Box>
         </Box>
       </HeaderContainer>
-      <h1>sad</h1>
     </Header>
   )
 }
