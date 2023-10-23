@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "img": "https://github.com/bambuuk/future-invest/blob/main/src/assets/offers/oxalis.png?raw=true",
+    "title": "Oxalis",
+    "subtitle": "Brooklyn, NY",
+    "description": "A recognized leader in language immersion & early education, opening second school.",
+    "amount": "574000",
+    "securityType": "Revenue Sharing Note",
+    "investmentMultiple": "1.4x",
+    "maturity": 48,
+    "minInvestment": 100
+  },
+  {
+    "id": 2,
+    "img": "https://github.com/bambuuk/future-invest/blob/main/src/assets/offers/oxalis2.png?raw=true",
+    "title": "Oxalis",
+    "subtitle": "Brooklyn, NY",
+    "description": "A recognized leader in language immersion & early education, opening second school.",
+    "amount": "680000",
+    "securityType": "Revenue Sharing Note",
+    "investmentMultiple": "1.4x",
+    "maturity": 40,
+    "minInvestment": 200
+  },
+  {
+    "id": 3,
+    "img": "https://github.com/bambuuk/future-invest/blob/main/src/assets/offers/oxalis3.png?raw=true",
+    "title": "Oxalis",
+    "subtitle": "Brooklyn, NY",
+    "description": "A recognized leader in language immersion & early education, opening second school.",
+    "amount": "500000",
+    "securityType": "Revenue Sharing Note",
+    "investmentMultiple": "1.4x",
+    "maturity": 24,
+    "minInvestment": 150
+  },
+  {
+    "id": 4,
+    "img": "https://github.com/bambuuk/future-invest/blob/main/src/assets/offers/oxalis4.png?raw=true",
+    "title": "Oxalis",
+    "subtitle": "Brooklyn, NY",
+    "description": "A recognized leader in language immersion & early education, opening second school.",
+    "amount": "904000",
+    "securityType": "Revenue Sharing Note",
+    "investmentMultiple": "1.4x",
+    "maturity": 50,
+    "minInvestment": 300
+  },
+  {
+    "id": 5,
+    "img": "https://github.com/bambuuk/future-invest/blob/main/src/assets/offers/oxalis5.png?raw=true",
+    "title": "Oxalis",
+    "subtitle": "Brooklyn, NY",
+    "description": "A recognized leader in language immersion & early education, opening second school.",
+    "amount": "150000",
+    "securityType": "Revenue Sharing Note",
+    "investmentMultiple": "1.4x",
+    "maturity": 32,
+    "minInvestment": 300
+  },
+  {
+    "id": 6,
+    "img": "https://github.com/bambuuk/future-invest/blob/main/src/assets/offers/oxalis6.png?raw=true",
+    "title": "Oxalis",
+    "subtitle": "Brooklyn, NY",
+    "description": "A recognized leader in language immersion & early education, opening second school.",
+    "amount": "574000",
+    "securityType": "Revenue Sharing Note",
+    "investmentMultiple": "1.4x",
+    "maturity": 15,
+    "minInvestment": 20
+  },
+  {
+    "id": 7,
+    "img": "https://github.com/bambuuk/future-invest/blob/main/src/assets/offers/oxalis.png?raw=true",
+    "title": "Oxalis",
+    "subtitle": "Brooklyn, NY",
+    "description": "A recognized leader in language immersion & early education, opening second school.",
+    "amount": "700000",
+    "securityType": "Revenue Sharing Note",
+    "investmentMultiple": "1.4x",
+    "maturity": 48,
+    "minInvestment": 100
+  },
+  {
+    "id": 8,
+    "img": "https://github.com/bambuuk/future-invest/blob/main/src/assets/offers/oxalis.png?raw=true",
+    "title": "Oxalis",
+    "subtitle": "Brooklyn, NY",
+    "description": "A recognized leader in language immersion & early education, opening second school.",
+    "amount": "574000",
+    "securityType": "Revenue Sharing Note",
+    "investmentMultiple": "1.4x",
+    "maturity": 48,
+    "minInvestment": 100
+  },
+  {
+    "id": 9,
+    "img": "https://github.com/bambuuk/future-invest/blob/main/src/assets/offers/oxalis.png?raw=true",
+    "title": "Oxalis",
+    "subtitle": "Brooklyn, NY",
+    "description": "A recognized leader in language immersion & early education, opening second school.",
+    "amount": "574000",
+    "securityType": "Revenue Sharing Note",
+    "investmentMultiple": "1.4x",
+    "maturity": 48,
+    "minInvestment": 100
+  },
+  {
+    "id": 10,
+    "img": "https://github.com/bambuuk/future-invest/blob/main/src/assets/offers/oxalis.png?raw=true",
+    "title": "Oxalis",
+    "subtitle": "Brooklyn, NY",
+    "description": "A recognized leader in language immersion & early education, opening second school.",
+    "amount": "574000",
+    "securityType": "Revenue Sharing Note",
+    "investmentMultiple": "1.4x",
+    "maturity": 48,
+    "minInvestment": 100
+  }
+]
