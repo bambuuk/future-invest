@@ -114,11 +114,17 @@ const CurrentAmount = styled('div')(({ theme }) => ({
   fontWeight: 700,
 }));
 
-const DescrBody = styled('div')({
+const DescrBody = styled('div')(({ theme }) => ({
   padding: '24px',
   width: '100%',
   flex: 1,
-});
+  [theme.breakpoints.down("md")]: {
+    padding: '15px',
+  },
+  [theme.breakpoints.down("sm")]: {
+    padding: '10px',
+  },
+}));
 
 const CustomBtn = styled(Button)(({ theme }) => ({
   padding: '24px 40px 22px 40px',
@@ -131,6 +137,9 @@ const CustomBtn = styled(Button)(({ theme }) => ({
   lineHeight: '24px',
   textTransform: 'uppercase',
   backgroundColor: theme.palette.secondary.main,
+  [theme.breakpoints.down("md")]: {
+    padding: '10px 20px',
+  },
 }));
 
 const Parameters = styled('div')({
@@ -144,22 +153,31 @@ const ParameterLine = styled('div')({
   justifyContent: 'space-between',
 });
 
-const LeftUnitParameter = styled('span')({
+const LeftUnitParameter = styled('span')(({ theme }) => ({
   color: '#333',
   fontFamily: 'Josefin Sans',
   fontSize: '16px',
   fontWeight: 400,
   lineHeight: '24px',
-});
+  [theme.breakpoints.down("md")]: {
+    fontSize: '14px',
+    lineHeight: '18px',
+  }
+}));
 
-const RightUnitParameter = styled('span')({
+const RightUnitParameter = styled('span')(({ theme }) => ({
   marginLeft: '24px',
   color: '#333',
   fontFamily: 'Josefin Sans',
   fontSize: '16px',
   fontWeight: 700,
   lineHeight: '24px',
-});
+  [theme.breakpoints.down("md")]: {
+    marginLeft: '15px',
+    fontSize: '14px',
+    lineHeight: '18px',
+  }
+}));
 
 interface InvestorItemProps {
   key: number;
@@ -189,7 +207,7 @@ const InvestorItem: FC<InvestorItemProps> = ({ offer }) => {
     maturity,
     minInvestment
   } = offer;
-  const [isShowSecondItem, setIsShowSecondItem] = useState<boolean>(false);
+  const [isShowSecondItem, setIsShowSecondItem] = useState<boolean>(true);
   const [firstItemAnimation, setFirstItemAnimation] = useState<string>('');
   const [secondItemAnimation, setSecondItemAnimation] = useState<string>('');
 
@@ -271,7 +289,6 @@ const InvestorItem: FC<InvestorItemProps> = ({ offer }) => {
               <LeftUnitParameter>Min. Investment</LeftUnitParameter>
               <RightUnitParameter>${minInvestment}</RightUnitParameter>
             </ParameterLine>
-
           </Parameters>
         </DescrBody>
         <CustomBtn variant="contained" color="secondary">View</CustomBtn>
