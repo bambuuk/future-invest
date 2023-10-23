@@ -1,4 +1,4 @@
-import { styled, Box } from '@mui/material';
+import { styled, Box, Button } from '@mui/material';
 
 export const CustomContainer = styled(Box)(({ theme }) => ({
   margin: '0 auto',
@@ -8,7 +8,7 @@ export const CustomContainer = styled(Box)(({ theme }) => ({
   padding: '0 15px'
 }));
 
-export const CustomBtn = styled('button')(({ theme }) => ({
+export const CustomBtn = styled(Button)(({ theme }) => ({
   padding: '24px 40px 22px 40px',
   backgroundColor: theme.palette.primary.main,
   color: '#fff',

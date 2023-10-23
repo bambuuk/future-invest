@@ -104,7 +104,7 @@ const Promo = () => {
               Browse vetted investment offerings in communities all over the US.
             </Description>
             <Box>
-              <CustomBtn>Get Started</CustomBtn>
+              <CustomBtn variant="contained" color="primary">Get Started</CustomBtn>
             </Box>
           </Box>
         </Box>

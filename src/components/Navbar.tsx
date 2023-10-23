@@ -1,5 +1,4 @@
-import { styled, Box } from '@mui/material';
-import React from 'react';
+import { styled, Box, Button } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -43,7 +42,7 @@ const Link = styled('a')({
   lineHeight: '24px',
 });
 
-const LoginButton = styled('button')(({ theme }) => ({
+const LoginButton = styled(Button)(({ theme }) => ({
   padding: '16px 40px 14px 40px',
   backgroundColor: theme.palette.primary.main,
   color: '#fff',
@@ -52,9 +51,10 @@ const LoginButton = styled('button')(({ theme }) => ({
   fontWeight: 700,
   lineHeight: '24px',
   textTransform: 'uppercase',
+  borderRadius: 0
 }));
 
-const RegisterButton = styled('button')(({ theme }) => ({
+const RegisterButton = styled(Button)(({ theme }) => ({
   padding: '16px 40px 14px 40px',
   border: `1px solid ${theme.palette.secondary.main}`,
   backgroundColor: 'transparent',
@@ -64,6 +64,7 @@ const RegisterButton = styled('button')(({ theme }) => ({
   fontWeight: 700,
   lineHeight: '24px',
   textTransform: 'uppercase',
+  borderRadius: 0
 }));
 
 const Navbar = () => {
@@ -100,8 +101,8 @@ const Navbar = () => {
             display: { xs: "none", md: "flex" },
             gap: '16px',
           }}>
-            <LoginButton>LOGIN</LoginButton>
-            <RegisterButton>Register</RegisterButton>
+            <LoginButton variant="contained" color="primary">LOGIN</LoginButton>
+            <RegisterButton color="secondary">Register</RegisterButton>
           </Box>
         </Box>
       </HeaderContainer>
