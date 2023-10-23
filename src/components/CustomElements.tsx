@@ -8,6 +8,12 @@ export const CustomContainer = styled(Box)(({ theme }) => ({
   padding: '0 15px'
 }));
 
+export const Section = styled('section')({
+  position: 'relative',
+  width: '100%',
+  overflow: 'hidden',
+});
+
 export const CustomBtn = styled(Button)(({ theme }) => ({
   padding: '24px 40px 22px 40px',
   backgroundColor: theme.palette.primary.main,

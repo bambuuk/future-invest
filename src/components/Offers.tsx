@@ -1,15 +1,9 @@
-import React from 'react'
 import { styled } from '@mui/material';
 import { CustomContainer } from './CustomElements';
 import InvestorCardList from './InvestorCardList';
+import { Section } from './CustomElements';
 
 const designElImg = require('../assets/offers-design-img.png');
-
-const Section = styled('section')({
-  position: 'relative',
-  width: '100%',
-  overflow: 'hidden',
-});
 
 const Wrapper = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -21,7 +15,7 @@ const Wrapper = styled('div')(({ theme }) => ({
   },
 }));
 
-const CustomHeader = styled('h2')(({ theme }) => ({
+const Head = styled('h2')(({ theme }) => ({
   color: '#333',
   textAlign: 'center',
   fontFamily: 'Josefin Sans',
@@ -75,7 +69,7 @@ const Offers = () => {
       <CustomContainer>
         <Wrapper>
           <DesignEl src={designElImg} />
-          <CustomHeader>Offerings open for investment</CustomHeader>
+          <Head>Offerings open for investment</Head>
           <Subtitle>
             Explore pre-vetted investment opportunities available in a growing number of industry categories.
           </Subtitle>
