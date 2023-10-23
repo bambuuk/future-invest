@@ -3,6 +3,8 @@ import { styled } from '@mui/material';
 import { CustomContainer } from './CustomElements';
 import InvestorCardList from './InvestorCardList';
 
+const designElImg = require('../assets/offers-design-img.png');
+
 const Section = styled('section')({
   position: 'relative',
   width: '100%',
@@ -13,6 +15,7 @@ const Wrapper = styled('div')(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   padding: '160px 0',
+  position: 'relative',
   [theme.breakpoints.down("sm")]: {
     padding: '100px 0',
   },
@@ -53,11 +56,25 @@ const Subtitle = styled('div')(({ theme }) => ({
   },
 }));
 
+const DesignEl = styled('img')(({ theme }) => ({
+  display: 'none',
+  width: '206px',
+  height: '201px',
+  position: 'absolute',
+  top: '50%',
+  transform: 'translateY(-50%)',
+  left: '-226px',
+  [theme.breakpoints.up(1700)]: {
+    display: 'block',
+  }
+}));
+
 const Offers = () => {
   return (
     <Section>
       <CustomContainer>
         <Wrapper>
+          <DesignEl src={designElImg} />
           <CustomHeader>Offerings open for investment</CustomHeader>
           <Subtitle>
             Explore pre-vetted investment opportunities available in a growing number of industry categories.
