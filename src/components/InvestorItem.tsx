@@ -1,7 +1,5 @@
-import React from 'react';
+import { FC } from 'react';
 import { styled, Box, Button, Divider } from '@mui/material';
-
-const cardImg = require('../assets/offers/oxalis.png');
 
 const Item = styled('div')({
   boxShadow: '0px 24px 60px 0px rgba(51, 51, 51, 0.16)',
@@ -128,38 +126,63 @@ const RightUnitParameter = styled('span')({
   lineHeight: '24px',
 });
 
-const InvestorItem = () => {
+interface InvestorItemProps {
+  key: number;
+  offer: {
+    id: number;
+    img: string;
+    title: string;
+    subtitle: string;
+    description: string;
+    amount: string;
+    securityType: string;
+    investmentMultiple: string;
+    maturity: number;
+    minInvestment: number;
+  }
+}
+
+const InvestorItem: FC<InvestorItemProps> = ({ offer }) => {
+  const {
+    img,
+    title,
+    subtitle,
+    description,
+    amount,
+    securityType,
+    investmentMultiple,
+    maturity,
+    minInvestment
+  } = offer;
+
+  console.log('width: ', `${(+amount / 1000000) * 100}`)
   return (
     <Box>
       <Item>
-        <Image src={cardImg} />
+        <Image src={img} />
         <Box sx={{ padding: '24px' }}>
-          <Title>Oxalis</Title>
-          <Subtitle>Brooklyn, NY</Subtitle>
-          <Description>
-            A recognized leader in language immersion & early education, opening second school.
-          </Description>
+          <Title>{title}</Title>
+          <Subtitle>{subtitle}</Subtitle>
+          <Description>{description}</Description>
           <RangeWrapper>
             <Range>
-              <MainRangeUnit sx={{ width: '80%' }} />
+              <MainRangeUnit sx={{ width: `${(+amount / 1000000) * 100}%` }} />
             </Range>
-            <Amount><CurrentAmount>$574,920</CurrentAmount>&nbsp;raised of $1,000,000</Amount>
+            <Amount><CurrentAmount>${(+amount).toLocaleString()}</CurrentAmount>&nbsp;raised of $1 000 000</Amount>
           </RangeWrapper>
         </Box>
       </Item>
 
       <SecondItem sx={{ display: 'none' }}>
         <DescrBody>
-          <Title>Oxalis</Title>
-          <Subtitle>Brooklyn, NY</Subtitle>
-          <Description>
-            A recognized leader in language immersion & early education, opening second school.
-          </Description>
+          <Title>{title}</Title>
+          <Subtitle>{subtitle}</Subtitle>
+          <Description>{description}</Description>
           <RangeWrapper>
             <Range>
-              <MainRangeUnit sx={{ width: '80%' }} />
+              <MainRangeUnit sx={{ width: `${(+amount / 1000000) * 100}%` }} />
             </Range>
-            <Amount><CurrentAmount>$574,920</CurrentAmount>&nbsp;raised of $1,000,000</Amount>
+            <Amount><CurrentAmount>${(+amount).toLocaleString()}</CurrentAmount>&nbsp;raised of $1 000 000</Amount>
           </RangeWrapper>
 
           <Divider sx={{ backgroundColor: '#ECECEC', margin: '24px 0' }} />
@@ -167,22 +190,22 @@ const InvestorItem = () => {
           <Parameters>
             <ParameterLine>
               <LeftUnitParameter>Security Type</LeftUnitParameter>
-              <RightUnitParameter>Revenue Sharing Note</RightUnitParameter>
+              <RightUnitParameter>{securityType}</RightUnitParameter>
             </ParameterLine>
 
             <ParameterLine>
               <LeftUnitParameter>Investment Multiple</LeftUnitParameter>
-              <RightUnitParameter>1.4x</RightUnitParameter>
+              <RightUnitParameter>{investmentMultiple}</RightUnitParameter>
             </ParameterLine>
 
             <ParameterLine>
               <LeftUnitParameter>Maturity</LeftUnitParameter>
-              <RightUnitParameter>48 Months</RightUnitParameter>
+              <RightUnitParameter>{maturity}</RightUnitParameter>
             </ParameterLine>
 
             <ParameterLine>
               <LeftUnitParameter>Min. Investment</LeftUnitParameter>
-              <RightUnitParameter>$100</RightUnitParameter>
+              <RightUnitParameter>${minInvestment}</RightUnitParameter>
             </ParameterLine>
 
           </Parameters>
