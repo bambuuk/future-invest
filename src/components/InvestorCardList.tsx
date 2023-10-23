@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { styled, Button, Box } from '@mui/material';
 import InvestorItem from './InvestorItem';
 import offers from '../data.json';
@@ -35,7 +35,10 @@ const ProjectsBtn = styled(Button)(({ theme }) => ({
 }));
 
 const InvestorCardList: FC = () => {
-  const content = offers.map(offer => (
+  const [isAllOffers, setIsAllOffers] = useState<boolean>(false);
+  const content = isAllOffers ? offers.map(offer => (
+    <InvestorItem key={offer.id} offer={offer} />
+  )) : offers.slice(0, 6).map(offer => (
     <InvestorItem key={offer.id} offer={offer} />
   ));
 
@@ -45,7 +48,14 @@ const InvestorCardList: FC = () => {
         {content}
       </List>
       <Box sx={{ margin: '0 auto' }}>
-        <ProjectsBtn variant="outlined" color="secondary">View All Projects</ProjectsBtn>
+        <ProjectsBtn
+          onClick={() => setIsAllOffers(true)}
+          variant="outlined"
+          color="secondary"
+          disabled={isAllOffers ? true : false}
+        >
+          View All Projects
+        </ProjectsBtn>
       </Box>
     </>
   )
