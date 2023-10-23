@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled } from '@mui/material';
+import { styled, Button, Box } from '@mui/material';
 import { CustomContainer } from './CustomElements';
 import InvestorCardList from './InvestorCardList';
 
@@ -37,6 +37,18 @@ const Subtitle = styled('div')({
   maxWidth: '770px'
 });
 
+const ProjectsBtn = styled(Button)(({ theme }) => ({
+  marginTop: '80px',
+  padding: '24px 40px 22px 40px',
+  color: theme.palette.secondary.main,
+  fontFamily: 'Josefin Sans',
+  fontSize: '16px',
+  fontWeight: 700,
+  lineHeight: '24px',
+  textTransform: 'uppercase',
+  borderRadius: 0,
+}))
+
 const Offers = () => {
   return (
     <Section>
@@ -47,6 +59,9 @@ const Offers = () => {
             Explore pre-vetted investment opportunities available in a growing number of industry categories.
           </Subtitle>
           <InvestorCardList />
+          <Box sx={{ margin: '0 auto' }}>
+            <ProjectsBtn variant="outlined" color="secondary">View All Projects</ProjectsBtn>
+          </Box>
         </Wrapper>
       </CustomContainer>
     </Section>
