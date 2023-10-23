@@ -115,7 +115,7 @@ const CurrentAmount = styled('div')(({ theme }) => ({
 }));
 
 const DescrBody = styled('div')(({ theme }) => ({
-  padding: '24px',
+  padding: '20px 24px',
   width: '100%',
   flex: 1,
   [theme.breakpoints.down("md")]: {
@@ -127,7 +127,7 @@ const DescrBody = styled('div')(({ theme }) => ({
 }));
 
 const CustomBtn = styled(Button)(({ theme }) => ({
-  padding: '24px 40px 22px 40px',
+  padding: '20px 40px 20px 40px',
   width: '100%',
   borderRadius: 0,
   color: '#FFF',
