@@ -1,5 +1,40 @@
-import { FC } from 'react';
-import { styled, Box, Button, Divider } from '@mui/material';
+import { FC, useState } from 'react';
+import { styled, Box, Button, Divider, keyframes } from '@mui/material';
+
+const slitInVertical = keyframes`
+  0% {
+    -webkit-transform: translateZ(-800px) rotateY(90deg);
+            transform: translateZ(-800px) rotateY(90deg);
+    opacity: 0;
+  }
+  54% {
+    -webkit-transform: translateZ(-160px) rotateY(87deg);
+            transform: translateZ(-160px) rotateY(87deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(0) rotateY(0);
+            transform: translateZ(0) rotateY(0);
+  }
+`;
+
+const slitOutVertical = keyframes`
+  0% {
+    -webkit-transform: translateZ(0) rotateY(0);
+            transform: translateZ(0) rotateY(0);
+    opacity: 1;
+  }
+  54% {
+    -webkit-transform: translateZ(-160px) rotateY(87deg);
+            transform: translateZ(-160px) rotateY(87deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(-800px) rotateY(90deg);
+            transform: translateZ(-800px) rotateY(90deg);
+    opacity: 0;
+  }
+`;
 
 const Item = styled('div')({
   boxShadow: '0px 24px 60px 0px rgba(51, 51, 51, 0.16)',
@@ -139,7 +174,7 @@ interface InvestorItemProps {
     investmentMultiple: string;
     maturity: number;
     minInvestment: number;
-  }
+  },
 }
 
 const InvestorItem: FC<InvestorItemProps> = ({ offer }) => {
@@ -154,11 +189,37 @@ const InvestorItem: FC<InvestorItemProps> = ({ offer }) => {
     maturity,
     minInvestment
   } = offer;
+  const [isShowSecondItem, setIsShowSecondItem] = useState<boolean>(false);
+  const [firstItemAnimation, setFirstItemAnimation] = useState<string>('');
+  const [secondItemAnimation, setSecondItemAnimation] = useState<string>('');
 
-  console.log('width: ', `${(+amount / 1000000) * 100}`)
+  const animationSlitInVertical = `${slitInVertical} 0.3s ease-out both`;
+  const animationSlitOutVertical = `${slitOutVertical} 0.3s ease-in both`;
+
+  const changeShowTypeCard = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    if (e.type === 'mouseenter') {
+      setFirstItemAnimation(animationSlitOutVertical);
+      setTimeout(() => {
+        setIsShowSecondItem(true);
+        setSecondItemAnimation(animationSlitInVertical);
+      }, 300);
+      console.log(e.type)
+    }
+    if (e.type === 'mouseleave') {
+      setSecondItemAnimation(animationSlitOutVertical);
+      setTimeout(() => {
+        setIsShowSecondItem(false);
+        setFirstItemAnimation(animationSlitInVertical);
+      }, 300);
+    }
+  }
+
   return (
-    <Box>
-      <Item>
+    <Box onMouseEnter={changeShowTypeCard} onMouseLeave={changeShowTypeCard}>
+      <Item sx={{
+        display: `${isShowSecondItem ? 'none' : 'flex'}`,
+        animation: firstItemAnimation,
+      }}>
         <Image src={img} />
         <Box sx={{ padding: '24px' }}>
           <Title>{title}</Title>
@@ -173,7 +234,10 @@ const InvestorItem: FC<InvestorItemProps> = ({ offer }) => {
         </Box>
       </Item>
 
-      <SecondItem sx={{ display: 'none' }}>
+      <SecondItem sx={{
+        display: isShowSecondItem ? 'flex' : 'none',
+        animation: secondItemAnimation,
+      }}>
         <DescrBody>
           <Title>{title}</Title>
           <Subtitle>{subtitle}</Subtitle>
@@ -216,4 +280,4 @@ const InvestorItem: FC<InvestorItemProps> = ({ offer }) => {
   )
 }
 
-export default InvestorItem
+export default InvestorItem;

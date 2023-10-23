@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { styled } from '@mui/material';
 import InvestorItem from './InvestorItem';
 import offers from '../data.json';
@@ -14,7 +14,7 @@ const List = styled('div')({
   justifyContent: 'center'
 });
 
-const InvestorCardList = () => {
+const InvestorCardList: FC = () => {
   const content = offers.map(offer => (
     <InvestorItem key={offer.id} offer={offer} />
   ));
