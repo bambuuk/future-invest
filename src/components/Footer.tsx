@@ -1,7 +1,11 @@
 import { FC } from 'react';
-import { styled, Box, Fab } from '@mui/material';
+import { styled, Box, Fab, TextField } from '@mui/material';
 import { CustomContainer } from './CustomElements';
-import ArrowCircleUpOutlinedIcon from '@mui/icons-material/ArrowCircleUpOutlined';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import facebook from '../assets/socialNetwork/facebook.svg';
+import twitter from '../assets/socialNetwork/twitter.svg';
+import inst from '../assets/socialNetwork/instagram.svg';
 
 const FooterEl = styled('footer')({
   position: 'relative',
@@ -29,7 +33,9 @@ const FirstBlockWrapper = styled(Box)(({ theme }) => ({
 
 const SecondBlockWrapper = styled(Box)({
   display: 'flex',
-  justifyContent: 'space-between'
+  justifyContent: 'space-between',
+  flexWrap: 'wrap',
+  gap: '20px'
 });
 
 const LogoBlock = styled(Box)(({ theme }) => ({
@@ -120,6 +126,32 @@ const ColumnItem = styled('a')(({ theme }) => ({
   }
 }));
 
+const InputBlock = styled(Box)({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '16px',
+  maxWidth: '370px',
+  width: '100%',
+});
+
+const InputTitle = styled(Box)({
+  color: '#333',
+  fontFamily: 'Josefin Sans',
+  fontSize: '24px',
+  fontWeight: 400,
+  lineHeight: '36px',
+});
+
+const SocialNetworks = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignSelf: 'end',
+  gap: '40px',
+  [theme.breakpoints.down('sm')]: {
+    marginTop: '20px'
+  }
+}));
+
 const Footer: FC = () => {
   return (
     <FooterEl>
@@ -133,30 +165,53 @@ const Footer: FC = () => {
             <Box sx={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'flex-start' } }}>
               <NavigationMenu>
                 <ColumnMenu>
-                  <ColumnItem sx={{ fontWeight: 700 }}>Services</ColumnItem>
-                  <ColumnItem>Email Marketing</ColumnItem>
-                  <ColumnItem>Campaigns</ColumnItem>
-                  <ColumnItem>Branding</ColumnItem>
-                  <ColumnItem>Offline</ColumnItem>
+                  <ColumnItem sx={{ fontWeight: 700 }} href="/">Services</ColumnItem>
+                  <ColumnItem href="/">Email Marketing</ColumnItem>
+                  <ColumnItem href="/">Campaigns</ColumnItem>
+                  <ColumnItem href="/">Branding</ColumnItem>
+                  <ColumnItem href="/">Offline</ColumnItem>
                 </ColumnMenu>
 
                 <ColumnMenu>
-                  <ColumnItem sx={{ fontWeight: 700 }}>About</ColumnItem>
-                  <ColumnItem>Our Story</ColumnItem>
-                  <ColumnItem>Benefits</ColumnItem>
-                  <ColumnItem>Team</ColumnItem>
-                  <ColumnItem>Careers</ColumnItem>
+                  <ColumnItem sx={{ fontWeight: 700 }} href="/">About</ColumnItem>
+                  <ColumnItem href="/">Our Story</ColumnItem>
+                  <ColumnItem href="/">Benefits</ColumnItem>
+                  <ColumnItem href="/">Team</ColumnItem>
+                  <ColumnItem href="/">Careers</ColumnItem>
                 </ColumnMenu>
               </NavigationMenu>
               <Box sx={{ width: '50px', height: '50px', justifySelf: 'flex-end' }}>
                 <Fab color="primary" size='medium'>
-                  <ArrowCircleUpOutlinedIcon />
+                  <KeyboardArrowUpIcon />
                 </Fab>
               </Box>
             </Box>
           </FirstBlockWrapper>
           <SecondBlockWrapper>
-            s
+            <InputBlock>
+              <InputTitle>Subscribe to our newsletter</InputTitle>
+              <Box sx={{ display: 'flex' }}>
+                <TextField
+                  label="Email address"
+                  id="standard-size-normal"
+                  defaultValue=""
+                  variant="standard"
+                  sx={{ flex: '1' }}
+                />
+                <Fab
+                  color="secondary"
+                  size='small'
+                  sx={{ borderRadius: '8px 8px 0px 0px', alignSelf: 'end' }}
+                >
+                  <NavigateNextIcon />
+                </Fab>
+              </Box>
+            </InputBlock>
+            <SocialNetworks>
+              <a href='https://www.facebook.com/' target='_blank' rel="noreferrer"><img src={facebook} alt="facebook" /></a>
+              <a href='https://twitter.com/' target='_blank' rel="noreferrer"><img src={twitter} alt="twitter" /></a>
+              <a href='https://www.instagram.com/' target='_blank' rel="noreferrer"><img src={inst} alt="instagram" /></a>
+            </SocialNetworks>
           </SecondBlockWrapper>
         </Wrapper>
       </CustomContainer>
