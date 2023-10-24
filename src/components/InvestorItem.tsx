@@ -207,7 +207,7 @@ const InvestorItem: FC<InvestorItemProps> = ({ offer }) => {
     maturity,
     minInvestment
   } = offer;
-  const [isShowSecondItem, setIsShowSecondItem] = useState<boolean>(true);
+  const [isShowSecondItem, setIsShowSecondItem] = useState<boolean>(false);
   const [firstItemAnimation, setFirstItemAnimation] = useState<string>('');
   const [secondItemAnimation, setSecondItemAnimation] = useState<string>('');
 
