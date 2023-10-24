@@ -5,6 +5,7 @@ import Promo from "./components/Promo";
 import Offers from "./components/Offers";
 import Analysis from "./components/Analysis";
 import RaiseCapital from "./components/RaiseCapital";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Offers />
       <Analysis />
       <RaiseCapital />
+      <Footer />
     </ThemeProvider>
   );
 }

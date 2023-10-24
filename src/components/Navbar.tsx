@@ -34,13 +34,29 @@ const Logo = styled('div')(({ theme }) => ({
   letterSpacing: '1.44px',
 }));
 
-const Link = styled('a')({
+const Link = styled('a')(({ theme }) => ({
   color: '#333',
   fontFamily: 'Josefin Sans',
   fontSize: '16px',
   fontWeight: 700,
   lineHeight: '24px',
-});
+  position: 'relative',
+  '&:after': {
+    content: '""',
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    width: 0,
+    color: 'transparent',
+    background: theme.palette.primary.main,
+    height: '2px',
+    transition: 'all 0.7s',
+  },
+  '&:hover:after': {
+    width: '100%',
+    left: 0,
+  }
+}));
 
 const LoginButton = styled(Button)(({ theme }) => ({
   padding: '16px 40px 14px 40px',
