@@ -4,6 +4,7 @@ import { theme } from "./theme";
 import Promo from "./components/Promo";
 import Offers from "./components/Offers";
 import Analysis from "./components/Analysis";
+import RaiseCapital from "./components/RaiseCapital";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Promo />
       <Offers />
       <Analysis />
+      <RaiseCapital />
     </ThemeProvider>
   );
 }

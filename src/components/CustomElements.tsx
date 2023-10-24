@@ -23,6 +23,7 @@ export const CustomBtn = styled(Button)(({ theme }) => ({
   fontWeight: 700,
   lineHeight: '24px',
   textTransform: 'uppercase',
+  borderRadius: 0,
   [theme.breakpoints.down("md")]: {
     padding: '20px 40px 18px 40px',
   },
