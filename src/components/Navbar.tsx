@@ -1,6 +1,7 @@
 import { styled, Box, Button } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import { scrollToSection } from '../utils/scrollToSection';
 
 const HeaderContainer = styled(Box)(({ theme }) => ({
   margin: '0 auto',
@@ -41,6 +42,7 @@ const Link = styled('a')(({ theme }) => ({
   fontWeight: 700,
   lineHeight: '24px',
   position: 'relative',
+  cursor: 'pointer',
   '&:after': {
     content: '""',
     position: 'absolute',
@@ -85,7 +87,7 @@ const RegisterButton = styled(Button)(({ theme }) => ({
 
 const Navbar = () => {
   return (
-    <Header>
+    <Header id="header">
       <HeaderContainer>
         <IconButton
           size="large"
@@ -109,9 +111,9 @@ const Navbar = () => {
             gap: '16px',
             alignItems: 'center',
           }}>
-            <Link href="/">Offers</Link>
-            <Link href="/">Analysis</Link>
-            <Link href="/">Raise Capital</Link>
+            <Link onClick={() => scrollToSection('offers')}>Offers</Link>
+            <Link onClick={() => scrollToSection('analysis')}>Analysis</Link>
+            <Link onClick={() => scrollToSection('raise-capital')}>Raise Capital</Link>
           </Box>
           <Box sx={{
             display: { xs: "none", md: "flex" },

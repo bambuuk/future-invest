@@ -93,7 +93,7 @@ const Analysis = () => {
   const isMediumScreen = useMediaQuery('(min-width: 600px)');
 
   return (
-    <Section sx={{ backgroundColor: '#ECF4FD' }}>
+    <Section sx={{ backgroundColor: '#ECF4FD' }} id="analysis">
       <CustomContainer>
         <Wrapper>
           <DesignEl src={designEl} />

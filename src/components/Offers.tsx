@@ -65,7 +65,7 @@ const DesignEl = styled('img')(({ theme }) => ({
 
 const Offers = () => {
   return (
-    <Section>
+    <Section id="offers">
       <CustomContainer>
         <Wrapper>
           <DesignEl src={designElImg} />

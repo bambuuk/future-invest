@@ -90,7 +90,7 @@ const Image = styled('img')(({ theme }) => ({
 
 const RaiseCapital = () => {
   return (
-    <Section>
+    <Section id="raise-capital">
       <CustomContainer>
         <Wrapper>
           <DesignEl src={designEl} />

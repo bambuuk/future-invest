@@ -3,6 +3,7 @@ import { styled, Box, Fab, TextField } from '@mui/material';
 import { CustomContainer } from './CustomElements';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import { scrollOnTop } from '../utils/scrollToSection';
 import facebook from '../assets/socialNetwork/facebook.svg';
 import twitter from '../assets/socialNetwork/twitter.svg';
 import inst from '../assets/socialNetwork/instagram.svg';
@@ -182,7 +183,7 @@ const Footer: FC = () => {
               </NavigationMenu>
               <Box sx={{ width: '50px', height: '50px', justifySelf: 'flex-end' }}>
                 <Fab color="primary" size='medium'>
-                  <KeyboardArrowUpIcon />
+                  <KeyboardArrowUpIcon onClick={scrollOnTop} />
                 </Fab>
               </Box>
             </Box>
