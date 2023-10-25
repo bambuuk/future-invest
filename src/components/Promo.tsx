@@ -90,16 +90,20 @@ const Promo: FC = () => {
             borderRadius: '50%',
             zIndex: 10
           }} />
-          <Box sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            width: '100%',
-            height: '100%',
-            alignItems: { xs: 'center', sm: 'start' },
-            position: 'relative',
-            zIndex: 100
-          }}>
+          <Box
+            data-aos="zoom-out-right"
+            data-aos-once="true"
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              width: '100%',
+              height: '100%',
+              alignItems: { xs: 'center', sm: 'start' },
+              position: 'relative',
+              zIndex: 100
+            }}
+          >
             <CustomHead>Meaningful investments in Main Street businesses</CustomHead>
             <Description>
               Browse vetted investment offerings in communities all over the US.

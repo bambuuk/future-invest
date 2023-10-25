@@ -9,23 +9,28 @@ import subtract from '../assets/subtract-icon.svg';
 import designEl from '../assets/analysis-group.svg';
 
 const Wrapper = styled('div')(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  gap: '30px',
-  flexWrap: 'wrap',
   minHeight: '100vh',
   height: '100%',
   position: 'relative',
   padding: '160px 0',
   [theme.breakpoints.down('lg')]: {
-    justifyContent: 'center',
     padding: '100px 0',
   },
   [theme.breakpoints.down('sm')]: {
-    justifyContent: 'center',
     padding: '100px 0',
     minHeight: 'unset',
   }
+}));
+
+const SecondWrapper = styled('div')(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  gap: '30px',
+  flexWrap: 'wrap',
+  height: '100%',
+  [theme.breakpoints.down('lg')]: {
+    justifyContent: 'center',
+  },
 }));
 
 const DescrWrapper = styled('div')(({ theme }) => ({
@@ -98,15 +103,17 @@ const Analysis: FC = () => {
       <CustomContainer>
         <Wrapper>
           <DesignEl src={designEl} />
-          <DescrWrapper>
-            <SubtractImage src={subtract} />
-            <Head>$7M+ paid out to investors</Head>
-            <Description>
-              Next Invest has already paid out over $7M in cash returns to investors. Earn potential cash
-              payments through unique revenue-share and debt financing investments.
-            </Description>
-          </DescrWrapper>
-          {isMediumScreen && <Chart />}
+          <SecondWrapper data-aos="zoom-in-right" data-aos-once="true" data-aos-delay="500">
+            <DescrWrapper>
+              <SubtractImage src={subtract} />
+              <Head>$7M+ paid out to investors</Head>
+              <Description>
+                Next Invest has already paid out over $7M in cash returns to investors. Earn potential cash
+                payments through unique revenue-share and debt financing investments.
+              </Description>
+            </DescrWrapper>
+            {isMediumScreen && <Chart />}
+          </SecondWrapper>
         </Wrapper>
       </CustomContainer>
     </Section>

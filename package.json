@@ -16,6 +16,7 @@
     "@types/react": "^18.2.30",
     "@types/react-dom": "^18.2.14",
     "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -45,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.6"
   }
 }

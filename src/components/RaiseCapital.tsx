@@ -95,17 +95,17 @@ const RaiseCapital: FC = () => {
       <CustomContainer>
         <Wrapper>
           <DesignEl src={designEl} />
-          <DescrWrapper>
-            <Head>$7M+ paid out to investors</Head>
+          <DescrWrapper data-aos="zoom-out" data-aos-delay="500" data-aos-once="true">
+            <Head>Looking to raise capital for your growing business?</Head>
             <Description>
-              Next Invest has already paid out over $7M in cash returns to investors. Earn potential cash
-              payments through unique revenue-share and debt financing investments.
+              Whether expanding or opening a brand-new concept, we make it easy to raise
+              money from thousands of local investors.
             </Description>
             <Box marginTop='40px'>
               <CustomBtn variant="contained" color="primary">Apply Online</CustomBtn>
             </Box>
           </DescrWrapper>
-          <Image src={moneyTree} />
+          <Image data-aos="zoom-out" data-aos-delay="500" data-aos-once="true" src={moneyTree} />
         </Wrapper>
       </CustomContainer>
     </Section>

@@ -197,6 +197,7 @@ interface InvestorItemProps {
 
 const InvestorItem: FC<InvestorItemProps> = ({ offer }) => {
   const {
+    id,
     img,
     title,
     subtitle,
@@ -233,7 +234,12 @@ const InvestorItem: FC<InvestorItemProps> = ({ offer }) => {
   }
 
   return (
-    <Box onMouseEnter={changeShowTypeCard} onMouseLeave={changeShowTypeCard}>
+    <Box
+      onMouseEnter={changeShowTypeCard}
+      onMouseLeave={changeShowTypeCard}
+      data-aos="zoom-out"
+      data-aos-delay={`${id}00`}
+    >
       <Item sx={{
         display: `${isShowSecondItem ? 'none' : 'flex'}`,
         animation: firstItemAnimation,

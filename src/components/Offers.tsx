@@ -70,8 +70,8 @@ const Offers: FC = () => {
       <CustomContainer>
         <Wrapper>
           <DesignEl src={designElImg} />
-          <Head>Offerings open for investment</Head>
-          <Subtitle>
+          <Head data-aos="zoom-out" data-aos-once="true">Offerings open for investment</Head>
+          <Subtitle data-aos="zoom-out" data-aos-once="true">
             Explore pre-vetted investment opportunities available in a growing number of industry categories.
           </Subtitle>
           <InvestorCardList />
