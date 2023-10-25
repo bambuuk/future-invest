@@ -99,7 +99,7 @@ const HamburgerMenu: FC<HamburgerMenuProps> = ({ open, onClose }) => {
           </SidebarLink>
         </List>
         <Box sx={{
-          display: { xs: "block", sm: "none" },
+          display: { xs: "block", md: "none" },
           width: '100%'
         }}>
           <LoginButton

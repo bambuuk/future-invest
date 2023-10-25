@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { styled } from '@mui/material';
 import { CustomContainer } from './CustomElements';
 import InvestorCardList from './InvestorCardList';
@@ -63,7 +64,7 @@ const DesignEl = styled('img')(({ theme }) => ({
   }
 }));
 
-const Offers = () => {
+const Offers: FC = () => {
   return (
     <Section id="offers">
       <CustomContainer>

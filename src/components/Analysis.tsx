@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { Section, CustomContainer } from './CustomElements';
 import { styled } from '@mui/material';
 import { useMediaQuery } from '@mui/material';
@@ -89,7 +90,7 @@ const DesignEl = styled('img')(({ theme }) => ({
   }
 }));
 
-const Analysis = () => {
+const Analysis: FC = () => {
   const isMediumScreen = useMediaQuery('(min-width: 600px)');
 
   return (

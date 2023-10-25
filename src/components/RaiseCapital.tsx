@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { Section, CustomContainer, CustomBtn } from './CustomElements';
 import { styled, Box } from '@mui/material';
 
@@ -88,7 +89,7 @@ const Image = styled('img')(({ theme }) => ({
   height: '100%',
 }));
 
-const RaiseCapital = () => {
+const RaiseCapital: FC = () => {
   return (
     <Section id="raise-capital">
       <CustomContainer>

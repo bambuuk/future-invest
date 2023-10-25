@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { LineChart } from '@mui/x-charts';
 import { useMediaQuery } from '@mui/material';
 
@@ -16,7 +17,7 @@ const FranceGDPperCapita = [
   4000000, 6100000,
 ];
 
-const Chart = () => {
+const Chart: FC = () => {
   const isMediumScreen = useMediaQuery('(min-width: 600px)');
 
   const chartWidth = isMediumScreen ? 500 : 540;

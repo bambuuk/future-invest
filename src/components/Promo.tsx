@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { styled, Box } from '@mui/material';
 import { CustomContainer, CustomBtn } from './CustomElements';
 
@@ -67,7 +68,7 @@ const Description = styled('div')(({ theme }) => ({
   },
 }));
 
-const Promo = () => {
+const Promo: FC = () => {
   return (
     <Section>
       <CustomContainer>
