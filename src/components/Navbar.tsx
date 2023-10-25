@@ -1,7 +1,9 @@
+import { useState, FC } from 'react';
 import { styled, Box, Button } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { scrollToSection } from '../utils/scrollToSection';
+import HamburgerMenu from './HamburgerMenu';
 
 const HeaderContainer = styled(Box)(({ theme }) => ({
   margin: '0 auto',
@@ -85,14 +87,22 @@ const RegisterButton = styled(Button)(({ theme }) => ({
   borderRadius: 0
 }));
 
-const Navbar = () => {
+const Navbar: FC = () => {
+  const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
+
+  const handleClose = () => {
+    setMenuOpen(false);
+  }
+
   return (
     <Header id="header">
       <HeaderContainer>
+        <HamburgerMenu open={isMenuOpen} onClose={handleClose} />
         <IconButton
           size="large"
           edge="start"
           aria-label="menu"
+          onClick={() => setMenuOpen(true)}
           sx={{
             mr: 2,
             display: { xs: "block", md: "none" },
