@@ -185,9 +185,9 @@ const Footer: FC = () => {
                   <ColumnItem href="/">Careers</ColumnItem>
                 </ColumnMenu>
               </NavigationMenu>
-              <Box sx={{ width: '50px', height: '50px', justifySelf: 'flex-end' }}>
+              <Box sx={{ width: '50px', height: '50px', justifySelf: 'flex-end' }} onClick={scrollOnTop}>
                 <Fab color="primary" size='medium'>
-                  <KeyboardArrowUpIcon onClick={scrollOnTop} />
+                  <KeyboardArrowUpIcon />
                 </Fab>
               </Box>
             </Box>
