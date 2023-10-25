@@ -112,7 +112,7 @@ const Navbar: FC = () => {
           <MenuIcon />
         </IconButton>
         <Logo>
-          NEXT INVEST
+          FUTURE INVEST
         </Logo>
 
         <Box sx={{ display: 'flex', gap: '24px', }}>

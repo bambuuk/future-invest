@@ -160,7 +160,7 @@ const Footer: FC = () => {
         <Wrapper>
           <FirstBlockWrapper>
             <LogoBlock>
-              <Logo>NEXT INVEST</Logo>
+              <Logo>FUTURE INVEST</Logo>
               <LogoDescription>Copyright © 2023. Made by Ivan Korobka</LogoDescription>
             </LogoBlock>
             <Box sx={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'flex-start' } }}>
