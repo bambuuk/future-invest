@@ -237,7 +237,8 @@ const InvestorItem: FC<InvestorItemProps> = ({ offer }) => {
       onMouseEnter={changeShowTypeCard}
       onMouseLeave={changeShowTypeCard}
       data-aos="zoom-out"
-      data-aos-delay={`${id}00`}
+      data-aos-delay={id <= 6 ? `${id + 1}00` : '100'}
+      data-aos-once="true"
     >
       <Item sx={{
         display: `${isShowSecondItem ? 'none' : 'flex'}`,

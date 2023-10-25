@@ -71,7 +71,7 @@ interface HamburgerMenuProps {
 
 const HamburgerMenu: FC<HamburgerMenuProps> = ({ open, onClose }) => {
   return (
-    <Wrapper sx={{ opacity: open ? 1 : 0, visibility: open ? 'visible' : 'hidden', }}>
+    <Box>
       <Sidebar sx={{ transform: open ? 'translateX(0)' : 'translateX(-250px)' }}>
         <CloseIcon
           sx={{ color: '#fff', position: 'absolute', left: '210px' }}
@@ -118,7 +118,8 @@ const HamburgerMenu: FC<HamburgerMenuProps> = ({ open, onClose }) => {
           </RegisterButton>
         </Box>
       </Sidebar>
-    </Wrapper>
+      <Wrapper sx={{ transform: open ? 'translateX(0)' : 'translateX(-100%)' }} onClick={() => onClose(false)} />
+    </Box>
   );
 };
 
