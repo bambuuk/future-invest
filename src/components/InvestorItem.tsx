@@ -222,7 +222,6 @@ const InvestorItem: FC<InvestorItemProps> = ({ offer }) => {
         setIsShowSecondItem(true);
         setSecondItemAnimation(animationSlitInVertical);
       }, 300);
-      console.log(e.type)
     }
     if (e.type === 'mouseleave') {
       setSecondItemAnimation(animationSlitOutVertical);

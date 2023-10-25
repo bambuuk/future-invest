@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { styled, Box, Fab, TextField } from '@mui/material';
 import { CustomContainer } from './CustomElements';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
@@ -154,6 +154,10 @@ const SocialNetworks = styled(Box)(({ theme }) => ({
 }));
 
 const Footer: FC = () => {
+  const [value, setValue] = useState<string>('');
+
+
+
   return (
     <FooterEl>
       <CustomContainer>
@@ -195,7 +199,8 @@ const Footer: FC = () => {
                 <TextField
                   label="Email address"
                   id="standard-size-normal"
-                  defaultValue=""
+                  value={value}
+                  onChange={(e) => setValue(e.target.value)}
                   variant="standard"
                   sx={{ flex: '1' }}
                 />
@@ -203,8 +208,9 @@ const Footer: FC = () => {
                   color="secondary"
                   size='small'
                   sx={{ borderRadius: '8px 8px 0px 0px', alignSelf: 'end' }}
+                  onClick={() => setValue('')}
                 >
-                  <NavigateNextIcon />
+                  <NavigateNextIcon onClick={() => setValue('')} />
                 </Fab>
               </Box>
             </InputBlock>
