@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/future-invest/static/css/main.a5fb6984.css",
+    "main.js": "/future-invest/static/js/main.16fd98f5.js",
+    "static/media/promo-bg-img.png": "/future-invest/static/media/promo-bg-img.0f9fe6d302215ac7b4f6.png",
+    "static/media/money-tree.svg": "/future-invest/static/media/money-tree.260a6127f80f546958b0426ba82a29f2.svg",
+    "static/media/offers-design-img.png": "/future-invest/static/media/offers-design-img.1802104c713e3102d271.png",
+    "static/media/design-el.png": "/future-invest/static/media/design-el.b04abdd14363cb636900.png",
+    "static/media/analysis-group.svg": "/future-invest/static/media/analysis-group.e41c911a02463cd9b48e16ccb6e17823.svg",
+    "static/media/twitter.svg": "/future-invest/static/media/twitter.31794f83ca3b9d66748a351293555cf5.svg",
+    "static/media/instagram.svg": "/future-invest/static/media/instagram.103242db7cfe0a64641519357cc7f482.svg",
+    "static/media/subtract-icon.svg": "/future-invest/static/media/subtract-icon.8e5c3343c0a8acc6c4bfbe78003a23b1.svg",
+    "index.html": "/future-invest/index.html",
+    "static/media/facebook.svg": "/future-invest/static/media/facebook.6c02d9b8bf47f8291b5b34de6aa020a7.svg",
+    "main.a5fb6984.css.map": "/future-invest/static/css/main.a5fb6984.css.map",
+    "main.16fd98f5.js.map": "/future-invest/static/js/main.16fd98f5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a5fb6984.css",
+    "static/js/main.16fd98f5.js"
+  ]
+}
